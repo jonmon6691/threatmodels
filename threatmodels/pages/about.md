@@ -1,5 +1,6 @@
 title: About
-date: 2014-06-03
+
+# About
 
 This site is dedicated to outlining, catagorizing, and explaining threat models
 of open source projects that enhance privacy and security. This site does not
