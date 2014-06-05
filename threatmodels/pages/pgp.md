@@ -1,12 +1,12 @@
 title: PGP
-app: PGP
+Application: PGP
 date: 2014-06-03
-trusted: Local Machine
-untrusted: Any intermediary
-key-storage: Local
-convenience: Low
-authentication: Web of Trust
-architecture: federated
+Trusted Parties: Local Machine
+Untrusted Parties: Any intermediary
+Key Storage: Local
+Convenience: Low
+Authentication: Web of Trust
+Architecture: federated
 tags: [email]
 
 # Intro
