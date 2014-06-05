@@ -10,6 +10,12 @@ is a prerequisite to understanding an application's security properties.
 Making this knowledge more accessible and easy to digest enables users to
 decide what application is suitable for their needs.
 
+## Contributing
+
+### Generate pages
+If you want to generate pages to view them before submitting a pull request,
+you may do so by following the instructions below.
+
 ```bash
 $ pip install -r requirements.txt
 # Run local server
@@ -17,3 +23,7 @@ $ python run.py
 # Build static content
 $ python freeze.py
 ```
+
+### Adding a new page
+To add a new page, navigate to `threatmodels/pages/`. Copy the
+`template.md.template` to `yourpagename.md` and fill in the appropriate values.
