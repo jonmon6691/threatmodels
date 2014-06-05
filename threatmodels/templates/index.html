@@ -4,6 +4,24 @@
 <h2>Posts</h2>
 
 <ul class="page-list">
+  <table border=1>
+  {% for app,row in table.iteritems() %}
+    <tr> 
+      {% for cell in row[0] %}
+        {% if app == 'header' %}
+          <th>{{ cell }}</th>
+        {% else %}
+          {% if cell == app %} 
+            <td><a href="{{ url_for( 'page' , path=row[1].path ) }}">{{ cell }}</a></td>
+          {% else %}
+            <td>{{ cell }}</td>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </tr>
+  {% endfor %}
+  </table>
+  
   {% for page in pages %}
       <li><a href="{{ url_for('page', path=page.path) }}">
           {{ page.meta.title }}
