@@ -2,6 +2,8 @@ from flask import render_template
 
 from app import app, pages
 
+taxonomy = [ 'Application', 'Trusted Parties', 'Untrusted Parties', 'Key Storage', 'Convenience',
+'Authentication', 'Architecture', 'tags' ]
 
 @app.route('/')
 def home():
@@ -9,7 +11,16 @@ def home():
     # Sort pages by date
     sorted_posts = sorted(posts, reverse=True,
         key=lambda page: page.meta['date'])
-    return render_template('index.html', pages=sorted_posts)
+    table = {}
+    table['header'] = [taxonomy, ""]
+    for post in sorted_posts:
+        metas = []
+        for col in taxonomy:
+            if col in page.meta:
+                metas.append(post.meta[col])
+        if len(metas) == len(taxonomy):
+            table[post.meta['Application']] = [metas,post]
+    return render_template('index.html', pages=sorted_posts, table=table)
 
 @app.route('/about/')
 def about():
