@@ -7,7 +7,7 @@ Key Storage: HTML5 localStorage
 Convenience: Low
 Authentication: Web of Trust
 Architecture: Federated
-tags:[email, browser-extension]
+tags: [email, browser-extension]
 
 # Intro
 
