@@ -1,0 +1,69 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>Your Site</title>
+  <link rel="stylesheet" href="/threatmodels/static/css/style.css">
+  
+
+</head>
+<body class="box">
+
+<nav class="nav-menu">
+    <ul>
+        <li><a href="/threatmodels/">Home</a></li>
+        <li><a href="/threatmodels/about/">About</a></li>
+        <li><a href="https://github.com/irdan/threatmodels">Source</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+  <div class="content" role="main">
+    
+<h1>Mailvelope</h1>
+<p>2014-06-10</p>
+<h1>Intro</h1>
+<p>Mailvelope is a browser extension for Google Chrome and Mozilla Firefox.
+Fundamentally, it provides a user interface for using OpenPGP on any website
+that allows user input. Users open the browser extension by clicking an icon
+within an input form on any whitelisted page. Within that interface the message
+and public keys are specified. After encrypting a message, users copy and paste
+the ciphertext into the input form. After receiving an encrypted message users
+can use Mailvelope to decrypt ciphertext.</p>
+<h1>Trusted Parties</h1>
+<p>The local machine must be trusted. Mailvelope requires that the browser is
+completely trusted and that no hostile browser extensions are installed. The
+open source implementation of OpenPGP in javascript, OpenPGP.js, must also be
+trusted.</p>
+<h1>Untrusted Parties</h1>
+<p>Mailvelope allows any website to be completely untrusted since user input is
+encrypted before it is entered. Any intermediary handling the ciphertext need
+not be trusted.</p>
+<h1>Key Storage</h1>
+<p>Public and private keys are stored in HTML5 localStorage. This storage is in
+theory remotely accessible, but is protected by the same origin policy. If
+Mailvelope is vulnerable to a CSRF attack, the keys could be revealed to a
+third party.</p>
+<h1>Convenience</h1>
+<p>Mailvelope brings PGP, and all of the inconvenience that accompanies it, to the
+web. While Mailvelope is much easier to use than a PGP command line utility, it
+still requires knowing your recipients public key in advance. The problems of
+authentication are not mitigated.</p>
+<p>The user interaction of copying and pasting ciphertext in and out of Mailvelope
+is well designed, but fundamentally awkward. This interaction could be a
+security hole if incorrectly handled by the user. For example, if a user types
+their message into gmail before copying it into Mailvelope to be encrypted,
+then gmail has access to the plaintext before it is encrypted.</p>
+<h1>Authentication</h1>
+<p>Mailvelope does not provided any means of authentication beyond what standard
+OpenPGP offers.</p>
+<h1>Architecture</h1>
+<p>Since anyone can run Mailvelope, the architecture of Mailvelope is considered
+federated.</p>
+
+  </div>
+
+</div><!-- end container -->
+<script src="/threatmodels/static/js/script.js"></script>
+</body>
+</html>
