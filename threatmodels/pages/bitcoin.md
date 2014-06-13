@@ -6,7 +6,7 @@ Untrusted Parties: Majority of clients in the network
 Key Storage: Local
 Convenience: Medium
 Authentication: Chain of cryptographic signatures
-Architecture: Distributed
+Architecture: P2P
 tags:[Crypto-currency peer-to-peer]
 
 # Intro
@@ -33,7 +33,10 @@ group of nodes should be considered "untrusted".
 
 # Key Storage
 Clients in the Bitcoin network are responsible for protecting their secret
-keys.
+keys. This is the minimum level of required trust attainable in an encryption
+system. Unfortunately, you must still trust your local machine in order to
+trust that your keys are safe. Services do exist to store Bitcoin wallets
+remotely, but those services are out of the scope of this threat model.
 
 # Convenience
 Bitcoin provides a unique service and in contrast to other services in the
@@ -43,7 +46,7 @@ secret keys must still be properly managed by the user and therefore,
 Bitcoin only receives a score of medium on the convenience scale.
 
 # Authentication
-The authentication in the bitcoin network takes place in the block chain and is
+The authentication in the Bitcoin network takes place in the block chain and is
 an ingenious way of protecting the public record of transactions. In order for
 a new block to get added to the chain, clients must solve a "hard" computation
 that includes a signature of the previous blocks. Changing a block requires
@@ -52,6 +55,11 @@ subsequent blocks. This proof-of-work model means that cheating is made more
 expensive that it''s worth. This is true security.
 
 # Architecture
-There is no central authority in the bitcoin network, and it could even operate
-without a constant internet connection if it needed to.
+There is no central authority in the Bitcoin network, and it could even operate
+without a constant internet connection if it needed to. This is known as a
+peer-to-peer architecture. Peer-to-peer architectures like the Bitcoin network
+provide security that other architectures can not. Because there is no central
+server, shutting down the network completely would mean cutting off each and
+every node in the network. This means that a denial-of-service attack is
+especially difficult to execute against the Bitcoin network.
 
