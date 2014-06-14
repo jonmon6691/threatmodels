@@ -1,6 +1,6 @@
 title: Bitcoin
 Application: Bitcoin
-date: 2014-06-06
+date: 2014-6-6
 Trusted Parties: Minority of clients in the network
 Untrusted Parties: Majority of clients in the network
 Key Storage: Local

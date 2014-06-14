@@ -1,6 +1,6 @@
 title: TOR
 Application: TOR
-date: 2014-06-13
+date: 2014-6-13
 Trusted Parties: Local Machine, TOR Exit node
 Untrusted Parties: Remote servers, TOR relay nodes
 Key Storage: Local
