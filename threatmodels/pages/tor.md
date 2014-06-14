@@ -12,7 +12,7 @@ tags:[ Anonymity-network ]
 # Intro
 Tor was originally known as the acronym TOR which stands for The Onion Router,
 but has since become a name in and of itself. The Tor network is a service
-designed to provides anonymity to internet users by encrypting their traffic
+designed to provide anonymity to internet users by encrypting their traffic
 and bouncing it between several other nodes. These nodes are actually just
 other Tor users' computers. The last node releases the traffic to the internet
 through a special node called a Tor exit node and is the only node that can see
@@ -45,7 +45,7 @@ Information about the network is held in a few central servers called super
 nodes. This speeds up the key exchange procedure and increases the convenience
 of using the network.
 
-A browser is available that is designed with Tor built in as a proxy and in
+A browser is available that is designed with Tor built in as a proxy and is
 specially designed to protect your identity at the application level. This
 makes it very easy for regular users to hide their identity while using the
 internet in mostly the same way that they normally would.
